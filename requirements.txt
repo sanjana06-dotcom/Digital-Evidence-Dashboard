@@ -1,0 +1,6 @@
+flask
+pandas
+python-magic
+reportlab
+werkzeug
+gunicorn

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Digital Evidence Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="container">
+    <h1>Digital Evidence Dashboard</h1>
+    <p>
+      <a class="btn btn-primary" href="{{ url_for('upload') }}">Upload Evidence</a>
+      <a class="btn btn-secondary" href="{{ url_for('export_csv') }}">Export CSV</a>
+    </p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for cat, msg in messages %}
+          <div class="alert alert-{{cat}}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <table class="table table-sm table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th>ID</th><th>File</th><th>Type</th><th>Size (bytes)</th><th>MD5</th><th>SHA256</th><th>Uploaded</th><th>Verified</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in rows %}
+        <tr>
+          <td>{{ r['id'] }}</td>
+          <td>{{ r['file_name'] }}</td>
+          <td>{{ r['file_type'] }}</td>
+          <td>{{ r['file_size'] }}</td>
+          <td style="font-family:monospace;">{{ r['md5'] }}</td>
+          <td style="font-family:monospace;">{{ r['sha256'] }}</td>
+          <td>{{ r['upload_time'] }}</td>
+          <td>
+            {% if r['verified'] == 1 %}
+              <span class="badge bg-success">PASS</span>
+            {% else %}
+              <span class="badge bg-danger">FAIL</span>
+            {% endif %}
+          </td>
+          <td>
+            <form style="display:inline" action="{{ url_for('verify', ev_id=r['id']) }}" method="post">
+              <button class="btn btn-sm btn-outline-primary" type="submit">Verify</button>
+            </form>
+            <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('download', ev_id=r['id']) }}">Download</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
