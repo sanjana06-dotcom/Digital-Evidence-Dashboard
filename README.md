@@ -1,4 +1,4 @@
-# 🧾 Digital Evidence Dashboard  
+#  Digital Evidence Dashboard  
 **Flask-based Digital Forensics Evidence Management System**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen?style=for-the-badge)](https://digital-evidence-dashboard.onrender.com)
@@ -8,33 +8,33 @@
 
 ---
 
-## 💡 Overview
+##  Overview
 **Digital Evidence Dashboard** is a web-based **Forensic Evidence Management System** that allows investigators to securely upload, verify, and document digital files.  
 It supports **MD5 & SHA256 hashing**, **audit logging**, and **automated report generation** (CSV and PDF).  
 The interface features **dark/light mode** and an **animated “Matrix” 0/1 background** for a modern cyber-forensics look.
 
 ---
 
-## 🚀 Live Demo  
-🔗 **[Click here to open the live app](https://digital-evidence-dashboard.onrender.com)**
+##  Live Demo  
+ **[Click here to open the live app](https://digital-evidence-dashboard.onrender.com)**
 
 ---
 
-## 🎯 Features
-✅ Upload and automatically calculate **MD5** & **SHA256** hashes  
-✅ **Verify integrity** of uploaded evidence files  
-✅ **Delete** or manage records securely  
-✅ **Audit logging** with timestamps  
-✅ Export reports as:
-- 📊 **CSV (Excel)**  
-- 📄 **PDF with logo and timestamp**
-✅ Toggle between **Dark 🌙 / Light ☀️** themes  
-✅ **Animated 0/1 Matrix background**  
-✅ Fully responsive design (works on PC, tablet, mobile)
+##  Features
+ Upload and automatically calculate **MD5** & **SHA256** hashes  
+ **Verify integrity** of uploaded evidence files  
+ **Delete** or manage records securely  
+ **Audit logging** with timestamps  
+ Export reports as:
+-  **CSV (Excel)**  
+-  **PDF with logo and timestamp**
+ Toggle between **Dark  / Light ** themes  
+ **Animated 0/1 Matrix background**  
+   Fully responsive design (works on PC, tablet, mobile)
 
 ---
 
-## 🧠 Tech Stack
+##  Tech Stack
 | Layer | Technology |
 |-------|-------------|
 | **Frontend** | HTML5, CSS3, JavaScript |
@@ -46,7 +46,7 @@ The interface features **dark/light mode** and an **animated “Matrix” 0/1 ba
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### 🔹 Dashboard View  
 ![Dashboard Screenshot](https://github.com/sanjana06-dotcom/Digital-Evidence-Dashboard/assets/your_image_id_here)
@@ -60,7 +60,7 @@ The interface features **dark/light mode** and an **animated “Matrix” 0/1 ba
 
 ---
 
-## ⚙️ Installation (Local Setup)
+##  Installation (Local Setup)
 If you want to run this locally:
 ```bash
 # Clone this repository
